@@ -93,12 +93,15 @@ delimiter //
 		end //
 delimiter ;
 
-
+-- ####################################################################
+--		tabelas de telefones
+-- ####################################################################
 create table invalidos(
 id bigint auto_increment,
 ddd int(2),
 fone int(9),
-telefone int(11)
+telefone int(11),
+diohora datetime.
 primary key(id))engine=innodb charset=utf8;
 
 
