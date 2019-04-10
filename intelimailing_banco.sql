@@ -102,9 +102,16 @@ ddd int(2),
 fone int(9),
 telefone int(11),
 diahora datetime,
-primary key(id))engine=innodb charset=utf8;
+primary key(id),
+unique(telefone))engine=innodb charset=utf8;
 
-create table natende()engine=innodb charset=utf8;
+create table naoatende(
+ddd int(2),
+fone int(9),
+telefone int(11),
+diahora datetime,
+primary key(id),
+unique(telefone))engine=innodb charset=utf8;
 
 
 
