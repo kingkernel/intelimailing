@@ -13,7 +13,7 @@ version = 4.0.0-alpha.4
 
 [banco_de_dados]
 driver=mysql
-banco=xamasti
+banco=intelimailing
 usuario=root
 senha=
 host=127.0.0.1
