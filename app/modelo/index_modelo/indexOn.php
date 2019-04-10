@@ -56,11 +56,13 @@ $page->headersinclude .= fontAwesome(urlcss($_GET));
     $headers = ["Usuário", "Problema", "Estatus"];
     $table->headers($headers);
     $sql = queryDb("call sp_sel_teccalled()");
-    $arrayRow = [];
+    $arrayRow = []; 
+
     while ($query = $sql->fetch(PDO::FETCH_ASSOC)) {
-      if($query["estatus"] == "Aberto"){$class = "warning";} else {$class = "success";};
-        array_push($arrayRow, '<tr><td>'.$query["nameperson"].'</td><td>'.$query["prob"].'</td><td><span class="label label-'.$class.'">'.$query["estatus"].'</span></td></tr>');
-      };
+        if($query["estatus"] == "Aberto"){$class = "warning";} else {$class = "success";};
+            array_push($arrayRow, '<tr><td>'.$query["nameperson"].'</td><td>'.$query["prob"].'</td><td><span class="label label-'.$class.'">'.$query["estatus"].'</span></td></tr>');
+    };
+
     $table->rows($arrayRow);
 
     $panel_0->alertText = $table->html();

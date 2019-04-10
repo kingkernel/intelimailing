@@ -78,10 +78,10 @@ delimiter //
        teccalled.estatus,
        teccalled.opencalled,
        teccalled.description
-  FROM (xamasti.teccalled teccalled
-        INNER JOIN xamasti.prob_category prob_category
+  FROM (teccalled teccalled
+        INNER JOIN prob_category prob_category
            ON (teccalled.prob = prob_category.id))
-       INNER JOIN xamasti.persons persons ON (teccalled.openfor = persons.id)
+       INNER JOIN persons persons ON (teccalled.openfor = persons.id)
  WHERE (teccalled.estatus != 'Encerrado');
 		end //
 delimiter ;
@@ -101,7 +101,11 @@ id bigint auto_increment,
 ddd int(2),
 fone int(9),
 telefone int(11),
-diohora datetime.
+diahora datetime,
 primary key(id))engine=innodb charset=utf8;
+
+create table natende()engine=innodb charset=utf8;
+
+
 
 
