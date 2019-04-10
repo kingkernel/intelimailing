@@ -20,7 +20,7 @@ host=127.0.0.1
 
 [offlinedb]
 driver=mysql
-banco=xamasti
+banco=intelimailing
 usuario=root
 senha=
 host=127.0.0.1
@@ -30,7 +30,6 @@ comandos=database
 comandos=url
 [index]
 dbstart=0
-
 
 [company]
 name=Acerta Multiservices
