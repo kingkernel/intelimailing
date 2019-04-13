@@ -113,8 +113,6 @@ diahora datetime,
 primary key(id),
 unique(telefone))engine=innodb charset=utf8;
 
-create table cliente()engine=innodb charset=utf8;
-
 
 
 
