@@ -106,6 +106,7 @@ primary key(id),
 unique(telefone))engine=innodb charset=utf8;
 
 create table naoatende(
+id int auto_increment,
 ddd int(2),
 fone int(9),
 telefone int(11),

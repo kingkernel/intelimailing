@@ -122,4 +122,6 @@ $page->headersinclude .= fontAwesome(urlcss($_GET));
 $page->bodycontent = $topmenu->html().$body;
 $page->scriptsendpage = getjs_("./public/js/this/backend/xamastiFunctions.js");
 $page->render();
+$rc = new viacep;
+
 ?>
