@@ -123,5 +123,9 @@ $page->bodycontent = $topmenu->html().$body;
 $page->scriptsendpage = getjs_("./public/js/this/backend/xamastiFunctions.js");
 $page->render();
 $rc = new viacep;
-
+//$rc->cep ="08790490";
+$rc->estado = "SP";
+$rc->cidade = "Mogi";
+$rc->logradouro = "aristophanes+eboli";
+$rc->getOnName();
 ?>
