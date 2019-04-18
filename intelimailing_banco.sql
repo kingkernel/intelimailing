@@ -114,6 +114,18 @@ diahora datetime,
 primary key(id),
 unique(telefone))engine=innodb charset=utf8;
 
+create table comparativo(
+id int auto_increment,
+nome varchar(50),
+logradouro varchar(150),
+uf varchar(2),
+estado varchar(50),
+bairro varchar(50),
+cep int(8),
+numero varchar(15),
+complemento varchar(50),
+primary key(id))engine=innodb charset=utf8;
+
 
 
 
