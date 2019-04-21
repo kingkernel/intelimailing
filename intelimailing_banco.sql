@@ -129,6 +129,7 @@ fone2_completo bigint,
 ddd2 int,
 fone2 bigint,
 nome varchar(100),
+nomefantasia varchar(100),
 nascimento datetime,
 sexo varchar(10),
 tp_logr varchar(15),
@@ -140,6 +141,7 @@ estado varchar(50),
 cidade varchar(50),
 bairro varchar(50),
 cep int,
+email varchar(80),
 primary key(id))engine=innodb charset=utf8;
 
 create table fibra(

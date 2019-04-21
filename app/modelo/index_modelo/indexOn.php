@@ -8,7 +8,7 @@ $page = new page;
 $page->headersinclude .= fontAwesome(urlcss($_GET));
 
 	$topmenu =  new topnav;
-	$topmenu->brand = $_SESSION["load"]["company"]["name"]. ' <span class="fa fa-headphones"></span>';
+	$topmenu->brand = $_SESSION["load"]["company"]["name"]. ' Intelimailing  <span class="fa fa-home"></span>';
 
 		$use_info = new li_user_info;
 		$use_info->nomedisplay = $_SESSION["usuario"];
@@ -124,5 +124,4 @@ $rc = new viacep;
 //$rc->cidade = "Mogi";
 //$rc->logradouro = "aristophanes+eboli";
 //$rc->getOnName();
-
 ?>
