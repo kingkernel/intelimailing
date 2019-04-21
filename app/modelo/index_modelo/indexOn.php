@@ -117,10 +117,13 @@ $page->headersinclude .= fontAwesome(urlcss($_GET));
 $page->bodycontent = $topmenu->html().$body;
 $page->scriptsendpage = getjs_("./public/js/this/backend/xamastiFunctions.js");
 $page->render();
+<<<<<<< HEAD
 $rc = new viacep;
 //$rc->cep ="08790490";
 //$rc->estado = "SP";
 //$rc->cidade = "Mogi";
 //$rc->logradouro = "aristophanes+eboli";
 //$rc->getOnName();
+=======
+>>>>>>> 6f96cb5d8a4e8bdb5da3f1682ec46a28dcd9138d
 ?>
