@@ -1,3 +1,7 @@
+-- ####################################################################
+--		banco de dados do robô intelimailing
+-- 		Data de Criação: 
+-- ####################################################################
 create database intelimailing character set=utf8;
 
 use intelimailing;

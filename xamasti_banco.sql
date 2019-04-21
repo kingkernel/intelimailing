@@ -7,7 +7,13 @@ id int auto_increment,
 nameperson varchar(50),
 keyword varchar(65),
 active boolean default 1,
+tpuser varchar(30),
 primary key(id))engine=innodb charset=utf8;
+
+create table tp_user(
+tpuser varchar(30) primary key
+)engine=innodb charset=utf8;
+
 -- ####################################################################
 -- ####	Procedures referentes a persons	###############################
 -- ####################################################################

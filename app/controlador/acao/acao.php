@@ -43,7 +43,22 @@ class acao {
         $acaochamado = $_POST["calledaction"];
         $idchamado = $_POST["id"];
         $sql = 'call sp_up_teccalled("'.$acaochamado.'", "'.$idchamado.'")';
-        echo $sql;
+            $alert = new rowAlert;
+        try {
+            queryDb($sql);
+            $alert->alertTitle = 'Atualizado com Sucesso! <span class="glyphicon glyphicon-thumbs-up"><span>';
+            $alert->alertText = '<p>Atuazado o chamado. click em voltar ou aguarde que será rediurecionado automaticamente</p><a class="btn btn-primary" href="/">Voltar</a>';
+            $this->page->scriptsendpage = 'function reloadPage(){location.href="/";document.reload()}; window.setTimeout("reloadPage()", 6000);';
+            $this->page->bodycontent = $alert->html();
+            $this->page->render();
+        } catch (Exception $e) {
+            $alert->class = "alert alert-danger";
+            $alert->alertTitle = 'Erro de atualização <span class="glyphicon glyphicon-thumbs-down"><span>';
+            $alert->alertText = '<p>Pode ter ocorrido um erro de conexão com o banco de dados. Favor comunique a equipe de suporte</p><a class="btn btn-danger" href="/">Voltar</a>';
+            $this->page->bodycontent = $alert->html();
+            $this->page->scriptsendpage = 'function reloadPage(){location.href="/";document.reload()}; window.setTimeout("reloadPage()", 6000);';
+            $this->page->render();
+        }
 	}
 }
 ?>

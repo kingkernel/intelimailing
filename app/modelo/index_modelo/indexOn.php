@@ -15,12 +15,7 @@ $page->headersinclude .= fontAwesome(urlcss($_GET));
 		$use_info->exitlink = "/auth/logout/";
 		$use_info->updataidlink = "/user/update/";
 
-        $use_info1 = new li_user_info;
-        $use_info1->nomedisplay = "daniels";
-        $use_info1->exitlink = "/auth/logout/";
-        $use_info1->updataidlink = "/user/update/";
-
-    $topmenu->itensright=[$use_info, $use_info1];
+    $topmenu->itensright=[$use_info];
 
         $menu1 = new li_dropdown;
         $menu1->text = "Ações";
@@ -124,8 +119,8 @@ $page->scriptsendpage = getjs_("./public/js/this/backend/xamastiFunctions.js");
 $page->render();
 $rc = new viacep;
 //$rc->cep ="08790490";
-$rc->estado = "SP";
-$rc->cidade = "Mogi";
-$rc->logradouro = "aristophanes+eboli";
-$rc->getOnName();
+//$rc->estado = "SP";
+//$rc->cidade = "Mogi";
+//$rc->logradouro = "aristophanes+eboli";
+//$rc->getOnName();
 ?>
