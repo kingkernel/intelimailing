@@ -141,3 +141,9 @@ cidade varchar(50),
 bairro varchar(50),
 cep int,
 primary key(id))engine=innodb charset=utf8;
+
+create table fibra(
+id bigint auto_increment,
+nome varchar(100), 
+fone_completo int(11),
+primary key(id))engine=innodb charset=utf8;
