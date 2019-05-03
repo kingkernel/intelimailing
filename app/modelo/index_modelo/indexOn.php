@@ -127,7 +127,17 @@ $rc = new viacep;
 
 $string = 'VIEGGIO IND.C.ART.ALUMINIO LTDA ME,15991051851';
 $ar = ER::numXplode($string, ",");
-print_r($ar);
+//print_r($ar);
+
+$viacep = new viacep;
+$viacep->logradouro = "GUILHERME GIRALDELLI";
+//print_r($viacep->prepareLogradouro());
+$viacep->cidade = "HORTOLANDIA";
+$viacep->estado = "SP";
+//$viacep->getOnName();
+$array = $viacep->getOnName();
+print_r($array);
+//$dados = json_decode($viacep->getOnName());
 //$ar = ER::mysqlReplace("guarulhos", "cep", ".");
 //print_r($ar);
 ?>
