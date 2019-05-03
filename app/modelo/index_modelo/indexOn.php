@@ -124,4 +124,8 @@ $rc = new viacep;
 //$rc->cidade = "Mogi";
 //$rc->logradouro = "aristophanes+eboli";
 //$rc->getOnName();
+
+$string = 'VIEGGIO IND.C.ART.ALUMINIO LTDA ME,15991051851';
+$ar = ER::numXplode($string, ",");
+print_r($ar);
 ?>
