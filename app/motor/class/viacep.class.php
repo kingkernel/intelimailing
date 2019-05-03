@@ -22,5 +22,9 @@ class viacep{
 		$dados = curl_exec($curl);
 		return $dados;
 	}
+	public function prepareLogradouro(){
+		$logradouro = explode(" ", $this->logradouro);
+		return $logradouro;
+	}
 }
 ?>
