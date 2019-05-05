@@ -37,22 +37,6 @@ delimiter //
 delimiter ;
 
 
-create table prob_category(
-id int auto_increment,
-prob varchar(50),
-primary key(id))engine=innodb charset=utf8;
-
-insert into prob_category (prob) values ("Outros"),("Impressora não imprime"), ("Atualizar o SGV"),
-("Sem internet"), ("Computador Travando"), ("Computador lento"),
-("Troca de Equipamento"), ("Headset mudo"), ("Mudar usuário de lugar");
-
-delimiter //
-	create procedure sp_sel_prob_category()
-		begin
-			select * from prob_category;
-		end //
-delimiter ;
-
 create table teccalled (
 id int auto_increment,
 prob int,

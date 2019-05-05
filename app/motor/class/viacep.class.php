@@ -29,7 +29,8 @@ class viacep{
 		//echo $conteudo;
 		$valores = json_decode($conteudo);
 		foreach ($valores as $value) {
-			echo $value->cep;
+			echo $value->cep . '</br>';
+			echo $value->logradouro . '</br>';
 			/*
 	"cep": "01001-000",
 	"logradouro": "Praça da Sé",
