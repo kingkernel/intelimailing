@@ -29,19 +29,15 @@ class viacep{
 		//echo $conteudo;
 		$valores = json_decode($conteudo);
 		foreach ($valores as $value) {
-			echo $value->cep . '</br>';
+			echo str_replace("-", "", $value->cep)  . '</br>';
 			echo $value->logradouro . '</br>';
-			/*
-	"cep": "01001-000",
-	"logradouro": "Praça da Sé",
-	"complemento": "lado ímpar",
-	"bairro": "Sé",
-	"localidade": "São Paulo",
-	"uf": "SP",
-	"unidade": "",
-	"ibge": "3550308",
-	"gia": "1004"
-			*/
+			//echo $value->complemento . '</br>';
+			echo $value->bairro . '</br>';
+			echo $value->localidade . '</br>';
+			echo $value->uf . '</br>';
+			//echo $value->unidade . '</br>';
+			echo $value->ibge . '</br>';
+			echo $value->gia . '</br>';
 		}
 	}
 	public function prepareLogradouro(){
@@ -49,6 +45,9 @@ class viacep{
 		$this->logradouro = implode("+", $logradouro);
 		return $this->logradouro;
 		//"viacep.com.br/ws/RS/Porto Alegre/Domingos+Jose/json/"
+	}
+	public function updateInfoDb(){
+
 	}
 }
 ?>
